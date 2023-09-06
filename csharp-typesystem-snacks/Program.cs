@@ -13,7 +13,7 @@ if(primoNumeroScelto > secondoNumeroScelto)
     Console.WriteLine($"Il numero maggiore é: {secondoNumeroScelto}");
 }else
 {
-    Console.WriteLine("I numeri sono uguali");
+    Console.WriteLine($"I numeri {primoNumeroScelto} e {secondoNumeroScelto} sono uguali");
 }
 
 
@@ -123,8 +123,6 @@ if(singoloNomeElenco == controlloInvitato)
 
 //Snack 7: Crea un array vuoto. Chiedi per 6 volte all’utente di inserire un numero, se è dispari inseriscilo nell’array.
 
-int numeriDispari = new int {};
-
 for(int i = 0; i < 6; i++)
 {
     Console.WriteLine("Scrivi un numero");
@@ -137,5 +135,69 @@ for(int i = 0; i < 6; i++)
 
 
 
+
+
+
 //Snack 8: Crea un array di numeri interi e fai la somma di tutti gli elementi che sono in posizione dispari.
+
+int[] numeriInteri = {8, 45, 12, 5, 30, 15, 68, 10, 55, 49};
+int posizioneDispari = 0;
+for (int i = 0; i < numeriInteri.Length; i++)
+{   
+    //trovare gli elementi in posizione dispari
+    if(i  % 2 == 1)
+    {
+    //sommare gli elementi in posizione dispari
+        posizioneDispari += numeriInteri[i];
+    }
+}
+    Console.WriteLine(posizioneDispari);
+
+
+
+
+
+//Snack 9: Crea un array vuoto e chiedi all’utente un numero da inserire nell’array. Continua a chiedere i numeri all’utente e a inserirli nell’array,
+//fino a quando la somma degli elementi è minore di 50.
+
+int somma = 0;
+
+while(somma < 50)
+{
+    Console.WriteLine("Inserisci un numero");
+    int numero = int.Parse(Console.ReadLine());
+    somma += numero;
+}
+
+Console.WriteLine(somma);
+
+
+
+
+
+
+//Snack 10: Fai inserire un numero, che chiameremo N, all’utente. Genera N array, ognuno formato da 10 numeri casuali tra 1 e 100. Ogni volta che ne crei uno, stampalo a schermo.
+
+
+//chiedo un numero all'utente
+Console.WriteLine("Scrivi un numero");
+int num = int.Parse(Console.ReadLine());
+
+//genero numeri random da 1 a 100 per creare l'array
+Random numeriRandom = new Random();
+
+for (int i = 1; i < 10; i++)
+{
+    Console.WriteLine(numeriRandom.Next(1,101));
+}
+
+
+for (int i = 0; i < num; i++)
+{
+}
+
+
+
+
+
 
